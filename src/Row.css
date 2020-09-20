@@ -1,0 +1,69 @@
+.row {
+  margin-left: 20px;
+}
+
+.row__posters {
+  display: flex;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  padding: 20px;
+}
+
+.row__posters::-webkit-scrollbar {
+  display: none;
+}
+
+.row__poster {
+  width: 100%;
+  object-fit: contain;
+  max-height: 100px;
+  cursor: pointer;
+  transition: transform 0.5s;
+  margin-right: 10px;
+  position: relative;
+}
+
+.row__poster:hover {
+  transform: scale(1.08);
+}
+
+.row__posterLarge {
+  max-height: 250px;
+}
+
+.row__posterLarge:hover {
+  transform: scale(1.1);
+}
+
+.row__poster img {
+  max-height: 120px;
+}
+
+.row__posterLarge img {
+  max-height: 250px;
+}
+
+.movie__title {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.7);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 120px;
+  text-align: center;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in;
+}
+
+.movie__titleLarge {
+  height: 100%;
+}
+
+.row__poster:hover .movie__title {
+  opacity: 1;
+}
